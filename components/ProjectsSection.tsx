@@ -41,16 +41,17 @@ export default function ProjectsSection() {
           baseScale={0.88}
           stackPosition="15%"
           scaleEndPosition="8%"
+          endPaddingClassName="pb-40 md:pb-56"
           className="w-full"
         >
           {FEATURED_PROJECTS.map((project, index) => (
             <ScrollStackItem
               key={project.slug}
-              itemClassName="!h-auto overflow-hidden rounded-[32px] border border-white/10 bg-space-black/90 !p-4 backdrop-blur-xl sm:!p-6 md:!p-8"
+              itemClassName="!h-auto overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.035] !p-4 backdrop-blur-xl sm:!p-6 md:!p-8"
             >
               {/* Accent gradient overlay */}
               <div
-                className={`pointer-events-none absolute inset-0 rounded-[32px] bg-gradient-to-br ${project.accent} opacity-40`}
+                className={`pointer-events-none absolute inset-0 rounded-[32px] bg-gradient-to-br ${project.accent} opacity-30`}
               />
 
               {/* Top row */}
@@ -82,7 +83,7 @@ export default function ProjectsSection() {
                 {/* Left — two stacked images */}
                 <div className="grid gap-3 sm:gap-4">
                   <div
-                    className="relative overflow-hidden rounded-[20px] sm:rounded-[28px]"
+                    className="relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.035] backdrop-blur-xl sm:rounded-[28px]"
                     style={{ height: "clamp(120px, 14vw, 190px)" }}
                   >
                     <Image
@@ -101,7 +102,7 @@ export default function ProjectsSection() {
                     />
                   </div>
                   <div
-                    className="relative overflow-hidden rounded-[20px] bg-white/[0.025] sm:rounded-[28px]"
+                    className="relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.035] backdrop-blur-xl sm:rounded-[28px]"
                     style={{ height: "clamp(170px, 20vw, 240px)" }}
                   >
                     <div className="flex h-full flex-col justify-between p-4 sm:p-5">
@@ -117,7 +118,7 @@ export default function ProjectsSection() {
                         {project.stack.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full border border-white/10 bg-space-black/40 px-2 py-0.5 font-orbitron text-[8px] font-medium uppercase tracking-[0.14em] text-gray-400 sm:px-3 sm:text-[9px]"
+                            className="rounded-full border border-white/10 bg-white/[0.035] px-2 py-0.5 font-orbitron text-[8px] font-medium uppercase tracking-[0.14em] text-gray-400 backdrop-blur-xl sm:px-3 sm:text-[9px]"
                           >
                             {tag}
                           </span>
@@ -129,7 +130,7 @@ export default function ProjectsSection() {
 
                 {/* Right — tall main image */}
                 <div
-                  className="relative overflow-hidden rounded-[20px] sm:rounded-[28px]"
+                  className="relative overflow-hidden rounded-[20px] border border-white/10 bg-white/[0.035] backdrop-blur-xl sm:rounded-[28px]"
                   style={{ height: "clamp(300px, 42vw, 430px)" }}
                 >
                   <div
@@ -149,7 +150,7 @@ export default function ProjectsSection() {
         </ScrollStack>
 
         {/* CTA */}
-        <div className="flex justify-center pb-4 pt-8">
+        <div className="flex justify-center pb-4 pt-2">
           <Link
             href="/projects"
             className="group inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-8 py-3.5 font-orbitron text-xs font-semibold uppercase tracking-[0.24em] text-white/80 backdrop-blur-md transition duration-300 hover:border-atm-blue/50 hover:bg-atm-blue/10 hover:text-white"

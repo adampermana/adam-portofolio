@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Download } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import GitHubIcon from "./GitHubIcon";
+import DecryptedText from "./ui/DecryptedText";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -107,8 +108,20 @@ export default function HeroSection() {
               Portfolio / 2026
             </p>
             <h1 className="font-orbitron text-5xl font-black uppercase leading-[0.9] tracking-tight text-white sm:text-6xl md:text-8xl lg:text-9xl">
-              Adam
-              <span className="block text-white/[0.55]">Permana</span>
+              <DecryptedText
+                text="ADAM"
+                animateOn="view"
+                sequential
+                encryptedClassName="text-atm-blue/70"
+              />
+              <DecryptedText
+                text="PERMANA"
+                parentClassName="block"
+                className="text-white/[0.55]"
+                animateOn="view"
+                sequential
+                encryptedClassName="text-atm-blue/60"
+              />
             </h1>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-gray-300 md:text-lg">
               I build polished mobile applications with Flutter, thoughtful

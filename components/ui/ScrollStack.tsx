@@ -39,6 +39,7 @@ interface ScrollStackProps {
   rotationAmount?: number;
   blurAmount?: number;
   useWindowScroll?: boolean;
+  endPaddingClassName?: string;
   onStackComplete?: () => void;
 }
 
@@ -54,6 +55,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   rotationAmount = 0,
   blurAmount = 0,
   useWindowScroll = false,
+  endPaddingClassName = "pb-[42rem]",
   onStackComplete,
 }) => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -338,7 +340,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       style={{ overscrollBehavior: "contain" }}
     >
       <div ref={scrollerRef} className={useWindowScroll ? "" : "h-full"}>
-        <div className="scroll-stack-inner min-h-screen pb-[42rem] pt-[16vh]">
+        <div className={`scroll-stack-inner min-h-screen pt-[16vh] ${endPaddingClassName}`}>
           {children}
           <div className="scroll-stack-end h-px w-full" />
         </div>
