@@ -16,6 +16,18 @@ export default function FinalCTA() {
   const btnsRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
+  // Auto-open modal when navigated here with ?openform=1
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("openform") === "1") {
+      setIsProjectFormOpen(true);
+      const url = new URL(window.location.href);
+      url.searchParams.delete("openform");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, []);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // ── Background glow breathe ───────────────────────────────────────

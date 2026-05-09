@@ -86,7 +86,7 @@ export default async function ProjectDetailPage({
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <Link
-                href="/#contact"
+                href="/?openform=1#contact"
                 className="inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.03] px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition duration-300 hover:border-white/[0.25] hover:bg-white/[0.07]"
               >
                 Discuss Similar Project
