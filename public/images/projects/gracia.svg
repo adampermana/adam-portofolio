@@ -1,0 +1,21 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#02040A"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <circle cx="915" cy="190" r="280" fill="#A78BFA" opacity=".15"/>
+  <circle cx="270" cy="610" r="300" fill="#3BA7FF" opacity=".12"/>
+  <rect x="124" y="126" width="400" height="474" rx="36" fill="#07111F" stroke="white" stroke-opacity=".14" stroke-width="2"/>
+  <rect x="164" y="178" width="320" height="72" rx="20" fill="white" fill-opacity=".09"/>
+  <rect x="164" y="298" width="136" height="190" rx="28" fill="#3BA7FF" fill-opacity=".22"/>
+  <rect x="328" y="298" width="156" height="76" rx="24" fill="white" fill-opacity=".08"/>
+  <rect x="328" y="412" width="156" height="76" rx="24" fill="white" fill-opacity=".08"/>
+  <path d="M650 304h340M650 384h258M650 464h300" stroke="white" stroke-opacity=".2" stroke-width="24" stroke-linecap="round"/>
+  <text x="646" y="214" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="5">GRACIA</text>
+  <text x="650" y="552" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">ENTERPRISE OPERATIONS</text>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1200" y1="0" y2="760">
+      <stop stop-color="#120B24"/>
+      <stop offset=".48" stop-color="#02040A"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+  </defs>
+</svg>

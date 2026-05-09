@@ -1,0 +1,24 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#02040A"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <circle cx="900" cy="160" r="300" fill="#3BA7FF" opacity=".15"/>
+  <circle cx="220" cy="610" r="260" fill="#F5F7FA" opacity=".08"/>
+  <path d="M190 560c90-168 220-252 390-252s304 84 402 252" stroke="#3BA7FF" stroke-opacity=".28" stroke-width="4"/>
+  <path d="M580 258v332" stroke="white" stroke-opacity=".14" stroke-width="2"/>
+  <circle cx="580" cy="306" r="18" fill="#3BA7FF"/>
+  <circle cx="380" cy="410" r="14" fill="white" fill-opacity=".55"/>
+  <circle cx="790" cy="456" r="14" fill="white" fill-opacity=".55"/>
+  <rect x="122" y="126" width="304" height="500" rx="46" fill="#07111F" stroke="white" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M274 220l78 34v72c0 92-78 134-78 134s-78-42-78-134v-72l78-34Z" fill="#3BA7FF" fill-opacity=".18" stroke="white" stroke-opacity=".24" stroke-width="2"/>
+  <rect x="170" y="508" width="208" height="26" rx="13" fill="white" fill-opacity=".12"/>
+  <text x="518" y="240" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="4">SMART</text>
+  <text x="518" y="318" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="4">PATROL</text>
+  <text x="522" y="410" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">SECURITY PATROL</text>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1200" y1="0" y2="760">
+      <stop stop-color="#07111F"/>
+      <stop offset=".5" stop-color="#02040A"/>
+      <stop offset="1" stop-color="#10151F"/>
+    </linearGradient>
+  </defs>
+</svg>

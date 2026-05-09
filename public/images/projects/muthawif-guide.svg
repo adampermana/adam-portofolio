@@ -1,0 +1,22 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#02040A"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <circle cx="230" cy="170" r="260" fill="#3BA7FF" opacity=".16"/>
+  <circle cx="970" cy="570" r="320" fill="#818CF8" opacity=".14"/>
+  <rect x="720" y="100" width="320" height="540" rx="50" fill="#07111F" stroke="white" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M774 216h212M774 286h150M774 356h188" stroke="white" stroke-opacity=".18" stroke-width="22" stroke-linecap="round"/>
+  <rect x="774" y="450" width="88" height="88" rx="24" fill="#3BA7FF" fill-opacity=".28"/>
+  <rect x="884" y="450" width="88" height="88" rx="24" fill="white" fill-opacity=".08"/>
+  <path d="M166 548c86-88 172-132 258-132s172 44 258 132" stroke="#3BA7FF" stroke-opacity=".32" stroke-width="4"/>
+  <path d="M424 292l-48 120 120-48 48-120-120 48Z" fill="white" fill-opacity=".12" stroke="white" stroke-opacity=".24" stroke-width="2"/>
+  <text x="152" y="242" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="3">MUTHAWIF</text>
+  <text x="152" y="316" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="3">GUIDE</text>
+  <text x="156" y="392" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="26" letter-spacing="4">GUIDE OPERATIONS</text>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1200" y1="0" y2="760">
+      <stop stop-color="#07111F"/>
+      <stop offset=".52" stop-color="#02040A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+</svg>

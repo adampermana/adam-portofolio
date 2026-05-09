@@ -1,0 +1,22 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#02040A"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <circle cx="270" cy="180" r="290" fill="#22D3EE" opacity=".14"/>
+  <circle cx="940" cy="560" r="300" fill="#3BA7FF" opacity=".14"/>
+  <rect x="742" y="126" width="310" height="500" rx="46" fill="#07111F" stroke="white" stroke-opacity=".14" stroke-width="2"/>
+  <rect x="780" y="190" width="234" height="56" rx="18" fill="white" fill-opacity=".1"/>
+  <rect x="780" y="294" width="98" height="98" rx="26" fill="#3BA7FF" fill-opacity=".26"/>
+  <rect x="916" y="294" width="98" height="98" rx="26" fill="white" fill-opacity=".08"/>
+  <rect x="780" y="438" width="234" height="34" rx="17" fill="white" fill-opacity=".12"/>
+  <rect x="780" y="502" width="172" height="22" rx="11" fill="white" fill-opacity=".08"/>
+  <path d="M172 448h380M172 528h284" stroke="white" stroke-opacity=".18" stroke-width="24" stroke-linecap="round"/>
+  <text x="166" y="252" fill="#F5F7FA" font-family="Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="4">SERV.D</text>
+  <text x="172" y="338" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">SERVICE PLATFORM</text>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1200" y1="0" y2="760">
+      <stop stop-color="#06212A"/>
+      <stop offset=".5" stop-color="#02040A"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+  </defs>
+</svg>
