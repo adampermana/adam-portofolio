@@ -17,6 +17,11 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "ADAM PERMANA | Mobile App Developer",
   description: "Portfolio of Adam Permana, Mobile App Developer specializing in Flutter, React & Next.js. East Jakarta, Indonesia.",
+  icons: {
+    icon: "/logo-adam.png",
+    shortcut: "/logo-adam.png",
+    apple: "/logo-adam.png",
+  },
 };
 
 export default function RootLayout({

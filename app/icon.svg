@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <rect width="32" height="32" rx="8" fill="#02040A"/>
+  <!-- Glow backdrop -->
+  <rect width="32" height="32" rx="8" fill="url(#glow)" opacity="0.6"/>
+  <!-- "AP" initials -->
+  <text x="16" y="22" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" fill="#3BA7FF" letter-spacing="-0.5">AP</text>
+  <!-- Blue dot accent -->
+  <circle cx="27" cy="6" r="3" fill="#3BA7FF" opacity="0.9"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3BA7FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3BA7FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

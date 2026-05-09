@@ -31,17 +31,18 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50 px-4 py-4 md:px-8"
     >
       <div
-        className={`mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-3 transition-all duration-300 md:px-5 ${
-          scrolled
-            ? "border-white/[0.12] bg-space-black/[0.72] shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-            : "border-white/[0.08] bg-white/[0.025] backdrop-blur-md"
-        }`}
+        className={`mx-auto flex max-w-7xl items-center justify-between rounded-full border px-4 py-3 transition-all duration-300 md:px-5 ${scrolled
+          ? "border-white/[0.12] bg-space-black/[0.72] shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+          : "border-white/[0.08] bg-white/[0.025] backdrop-blur-md"
+          }`}
       >
-        <a href="/#home" className="flex items-center gap-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-atm-blue shadow-[0_0_18px_rgba(59,167,255,0.85)]" />
-          <span className="font-orbitron text-sm font-bold uppercase tracking-[0.24em] text-white md:text-base">
-            Adam Permana
-          </span>
+        <a href="/#home" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-adam.png"
+            alt="Adam Permana"
+            className="h-8 w-auto object-contain md:h-9 [filter:drop-shadow(0_0_10px_rgba(59,167,255,0.75))_drop-shadow(0_2px_6px_rgba(0,0,0,0.9))]"
+          />
         </a>
 
         <div className="hidden items-center gap-7 md:flex">
