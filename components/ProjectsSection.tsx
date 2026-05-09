@@ -14,8 +14,6 @@ export default function ProjectsSection() {
       id="work"
       className="relative overflow-hidden px-4 pb-16 pt-16 sm:px-6 md:px-12 md:pb-24 md:pt-24"
     >
-      <div className="pointer-events-none absolute left-0 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-atm-blue/10 blur-[120px]" />
-
       <div className="relative z-10 mx-auto max-w-5xl">
         {/* Header */}
         <div className="mb-6 md:mb-8">
