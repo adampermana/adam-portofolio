@@ -318,7 +318,7 @@ export default function GitHubContributions() {
   const totalContributions = data?.totalContributions ?? 0;
 
   const stats = [
-    { label: "Experience", value: "10+", sub: "Projects", icon: Activity },
+    { label: "Experience", value: "15+", sub: "Projects", icon: Activity },
     { label: "Apps Live", value: "08+", sub: "Shipped", icon: Smartphone },
     { label: "Stacks", value: "12+", sub: "Tools", icon: Layers },
   ];
