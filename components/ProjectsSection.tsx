@@ -18,7 +18,7 @@ export default function ProjectsSection() {
 
       <div className="relative z-10 mx-auto max-w-5xl">
         {/* Header */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-6 md:mb-8">
           <p className="mb-4 font-orbitron text-xs font-semibold uppercase tracking-[0.34em] text-atm-blue/80">
             Selected Work
           </p>
@@ -41,6 +41,7 @@ export default function ProjectsSection() {
           baseScale={0.88}
           stackPosition="15%"
           scaleEndPosition="8%"
+          startPaddingClassName="pt-4 md:pt-6"
           endPaddingClassName="pb-40 md:pb-56"
           className="w-full"
         >
