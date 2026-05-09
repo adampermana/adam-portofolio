@@ -71,7 +71,9 @@ async function fetchProfile(): Promise<GitHubProfile> {
 async function fetchContributionsGraphQL(): Promise<ContributionYear[]> {
   if (!GITHUB_TOKEN) return [];
 
-  const currentYear = new Date().getFullYear();
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const today = now.toISOString().split("T")[0]; // YYYY-MM-DD format
   const years = [currentYear, currentYear - 1, currentYear - 2, currentYear - 3, currentYear - 4];
 
   const yearQueries = years
@@ -79,7 +81,7 @@ async function fetchContributionsGraphQL(): Promise<ContributionYear[]> {
       (year) => `
     year${year}: contributionsCollection(
       from: "${year}-01-01T00:00:00Z"
-      to: "${Math.min(year, currentYear) === currentYear ? new Date().toISOString() : `${year}-12-31T23:59:59Z`}"
+      to: "${year === currentYear ? `${today}T23:59:59Z` : `${year}-12-31T23:59:59Z`}"
     ) {
       contributionCalendar {
         totalContributions
@@ -137,7 +139,9 @@ async function fetchContributionsGraphQL(): Promise<ContributionYear[]> {
  * Returns contribution data parsed from the GitHub contribution graph.
  */
 async function fetchContributionsFallback(): Promise<ContributionYear[]> {
-  const currentYear = new Date().getFullYear();
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const today = now.toISOString().split("T")[0]; // YYYY-MM-DD
   const years = [currentYear, currentYear - 1, currentYear - 2, currentYear - 3, currentYear - 4];
 
   const results: ContributionYear[] = [];
@@ -156,9 +160,15 @@ async function fetchContributionsFallback(): Promise<ContributionYear[]> {
       if (res.ok) {
         const json = await res.json();
         // jogruber API returns { total: { [year]: number }, contributions: [{date, count, level, ...}] }
-        total = json.total?.[year] ?? json.total?.[String(year)] ?? 0;
-        const contributions: { date: string; count: number; level: number }[] =
+        let contributions: { date: string; count: number; level: number }[] =
           json.contributions ?? [];
+
+        // Filter contributions to only include dates up to today if it's the current year
+        if (year === currentYear) {
+          contributions = contributions.filter((day) => day.date <= today);
+        }
+
+        total = json.total?.[year] ?? json.total?.[String(year)] ?? 0;
 
         // Group into weeks (7 days each, starting Sunday)
         let currentWeek: ContributionWeek | null = null;

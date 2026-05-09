@@ -32,9 +32,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${orbitron.variable} antialiased no-scrollbar`}
+      className={`${inter.variable} ${orbitron.variable} relative antialiased no-scrollbar`}
     >
-      <body className="bg-space-black text-soft-white font-inter bg-noise">
+      <body
+        className="bg-space-black text-soft-white font-inter bg-noise"
+        suppressHydrationWarning
+      >
         <Navbar />
         {children}
       </body>

@@ -7,9 +7,9 @@ export default function Home() {
       <HeroSection />
       <ScrollExperience />
 
-      <footer className="relative z-10 w-full border-t border-white/10 bg-space-black px-6 py-8 text-center">
-        <p className="text-sm text-gray-500">
-          Copyright {new Date().getFullYear()} Adam Permana. Mobile app developer portfolio.
+      <footer className="relative z-10 w-full border-t border-white/10 bg-space-black px-6 py-4 text-center">
+        <p className="text-xs text-gray-600">
+          © {new Date().getFullYear()} Adam Permana. All rights reserved.
         </p>
       </footer>
     </main>

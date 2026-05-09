@@ -1,8 +1,7 @@
 "use client";
 
-import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import InfoSection from "./InfoSection";
+import ProjectsSection from "./ProjectsSection";
 import FeatureCards from "./FeatureCards";
 import AboutSection from "./AboutSection";
 import FinalCTA from "./FinalCTA";
@@ -12,27 +11,33 @@ import CareerNetwork from "./CareerNetwork";
 export default function ScrollExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
   return (
-    <div ref={containerRef} className="relative w-full overflow-hidden">
+    /**
+     * overflow-hidden is CRITICAL — it clips the absolute overlay divs
+     * so they don't bleed outside the container and inflate page scroll height.
+     * background-attachment:fixed keeps astronaut image pinned to viewport.
+     */
+    <div
+      ref={containerRef}
+      className="relative w-full overflow-hidden"
+      style={{
+        backgroundImage: "url('/astronot-static.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Dark tint over the background */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-space-black/80" />
+      {/* Subtle radial blue glow accent */}
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_20%,rgba(59,167,255,0.10),transparent_70%)]" />
 
-      <motion.div
-        style={{ y: backgroundY }}
-        className="absolute inset-0 pointer-events-none z-0"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_15%,rgba(59,167,255,0.14),transparent_38%),linear-gradient(180deg,#02040A,#07111F_48%,#02040A)]" />
-      </motion.div>
-
+      {/* Sections scroll over the background */}
       <div className="relative z-10">
-        <InfoSection />
+        <ProjectsSection />
         <FeatureCards />
-        {/* import Perjalanan karier saya dibawah sini*/}
+        {/* Perjalanan karier */}
         <CareerNetwork />
         <GitHubContributions />
         <AboutSection />

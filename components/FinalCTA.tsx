@@ -2,10 +2,7 @@
 
 import { Send, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function FinalCTA() {
   const [isProjectFormOpen, setIsProjectFormOpen] = useState(false);
@@ -100,13 +97,13 @@ export default function FinalCTA() {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative flex items-center justify-center overflow-hidden px-6 py-24 md:px-12"
+      className="relative flex items-center justify-center overflow-hidden px-6 py-20 md:px-12"
     >
       <div className="star-field absolute inset-0 opacity-[0.25]" />
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-atm-blue/[0.12] via-space-black/70 to-transparent" />
       <div
         ref={glowRef}
-        className="absolute -bottom-[22rem] left-1/2 h-[34rem] w-[120vw] -translate-x-1/2 rounded-[100%] bg-atm-blue/16 blur-[110px]"
+        className="absolute -bottom-[10rem] left-1/2 h-[28rem] w-[100vw] -translate-x-1/2 rounded-[100%] bg-atm-blue/16 blur-[110px]"
       />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -131,17 +128,7 @@ export default function FinalCTA() {
             Start Project
             <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
-          <a
-            href="https://www.linkedin.com/in/adam-permana-457128193"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-3 rounded-full border border-white/[0.12] bg-white/[0.04] px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition duration-300 hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/10"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            Connect on LinkedIn
-          </a>
+
         </div>
       </div>
 

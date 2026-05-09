@@ -21,6 +21,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+function getVisibleMonths(year: number): string[] {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1; // 1-indexed
+  
+  if (year === currentYear) {
+    return months.slice(0, currentMonth);
+  }
+  
+  return months;
+}
+
 const levelClasses = [
   "bg-[#0d1117] border-white/[0.04]",
   "bg-emerald-950/80 border-emerald-400/10",
@@ -129,6 +141,16 @@ type ContributionCell = {
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function buildContributionCells(year: number, days: { date: string; count: number; level: number }[]): ContributionCell[] {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const today = now.toISOString().split("T")[0]; // YYYY-MM-DD
+  
+  // Filter days if current year
+  let filteredDays = days;
+  if (year === currentYear) {
+    filteredDays = days.filter((day) => day.date <= today);
+  }
+  
   const firstDay = new Date(Date.UTC(year, 0, 1)).getUTCDay();
   const cells: ContributionCell[] = Array.from({ length: firstDay }, (_, index) => ({
     key: `${year}-blank-start-${index}`,
@@ -137,7 +159,7 @@ function buildContributionCells(year: number, days: { date: string; count: numbe
     level: null,
   }));
 
-  days.forEach((day, index) => {
+  filteredDays.forEach((day, index) => {
     cells.push({
       key: `${year}-day-${index}`,
       date: day.date,
@@ -441,8 +463,8 @@ export default function GitHubContributions() {
                         <p className="font-orbitron text-sm font-black text-white">{year}</p>
                         <p className="mt-1 text-xs text-gray-600">{total} public contributions</p>
                       </div>
-                      <div className="grid w-[720px] grid-cols-12 text-xs text-gray-600">
-                        {months.map((m) => (
+                      <div className="grid grid-cols-12 gap-3 text-xs text-gray-600" style={{ width: `${getVisibleMonths(year).length * 60}px` }}>
+                        {getVisibleMonths(year).map((m) => (
                           <span key={`${year}-${m}`}>{m}</span>
                         ))}
                       </div>
