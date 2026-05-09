@@ -25,7 +25,7 @@ export default function AboutSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // ── Astronaut image: clip-path reveal + float ─────────────────────
+      // ── Astronaut image: clip-path reveal + float 
       if (imageWrapRef.current) {
         gsap.fromTo(
           imageWrapRef.current,
@@ -56,7 +56,7 @@ export default function AboutSection() {
         });
       }
 
-      // ── Glow pulse ────────────────────────────────────────────────────
+      // ── Glow pulse 
       if (glowRef.current) {
         gsap.to(glowRef.current, {
           scale: 1.25,
@@ -68,7 +68,7 @@ export default function AboutSection() {
         });
       }
 
-      // ── Label eyebrow ─────────────────────────────────────────────────
+      // ── Label eyebrow 
       if (labelRef.current) {
         gsap.fromTo(
           labelRef.current,
@@ -88,7 +88,7 @@ export default function AboutSection() {
         );
       }
 
-      // ── Heading: char-by-char reveal ──────────────────────────────────
+      // ── Heading: char-by-char reveal ────────
       if (headingRef.current) {
         const text = headingRef.current.innerText;
         headingRef.current.innerHTML = text
@@ -119,7 +119,7 @@ export default function AboutSection() {
         );
       }
 
-      // ── Body paragraph ────────────────────────────────────────────────
+      // ── Body paragraph ─
       if (bodyRef.current) {
         gsap.fromTo(
           bodyRef.current,
@@ -138,7 +138,7 @@ export default function AboutSection() {
         );
       }
 
-      // ── Highlight cards: stagger + slide-up ──────────────────────────
+      // ── Highlight cards: stagger + slide-up 
       if (highlightWrapRef.current) {
         const cards = highlightWrapRef.current.querySelectorAll<HTMLDivElement>(".hl-card");
         gsap.fromTo(
@@ -196,7 +196,7 @@ export default function AboutSection() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
 
-        {/* ── Astronaut image ───────────────────────────────────────────── */}
+        {/* ── Astronaut image ─────────────────── */}
         <div
           ref={imageWrapRef}
           className="relative mx-auto h-[390px] w-full max-w-[430px] lg:mx-0 lg:h-[520px]"
@@ -204,7 +204,7 @@ export default function AboutSection() {
         >
           <div
             ref={glowRef}
-            className="absolute inset-[14%] rounded-full bg-atm-blue/16 blur-[72px]"
+            className="absolute inset-[14%] rounded-full blur-[72px]"
           />
           <div className="relative h-full w-full">
             <Image
@@ -217,7 +217,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* ── Text content ──────────────────────────────────────────────── */}
+        {/* ── Text content */}
         <div>
           <p
             ref={labelRef}
